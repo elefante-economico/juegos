@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
     text-align: center;
-    padding-top: 40px;
+    padding: 40px 15px 0;
 }
 
 .contenedor {
@@ -22,4 +22,43 @@ button {
 input {
     padding: 10px;
     width: 120px;
+}
+
+/* --- Nuevos elementos --- */
+
+#nivel,
+#puntaje {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+#resultado {
+    margin: 20px 0 10px;
+}
+
+/* Operaciones con aspecto de terminal antigua */
+#operaciones {
+    font-family: "Courier New", monospace;
+    font-size: 1.3em;
+    background: #111;
+    color: #33ff66;
+    padding: 15px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+}
+
+button:hover {
+    background: #e6e6e6;
+}
+
+input:focus {
+    outline: 2px solid #33ff66;
+}
+
+#mensaje {
+    min-height: 1.5em;
+    font-weight: bold;
 }
