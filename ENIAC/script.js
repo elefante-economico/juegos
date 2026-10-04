@@ -9,37 +9,37 @@ function generarNivel() {
 
     let suma = Math.floor(Math.random() * 10) + 1;
 
-    actual = actual + suma;
+    actual += suma;
     operaciones.push("+" + suma);
 
-    actual = actual * 2;
+    actual *= 2;
     operaciones.push("×2");
 
-    document.getElementById("resultado").innerText =
-        "Resultado final: " + actual;
+*   document.getElementById("result*do").innerText =
+        "Resultad* final: " + actual;
 
-    document.getElementById("operaciones").innerHTML =
-        operaciones.join("<br>");
+    document.*etElementById("operaciones").inner*TML =
+        operaciones.join("<b*>");
 }
 
 function comprobar() {
 
-    let respuesta = parseInt(
-        document.getElementById("respuesta").value
+  * let respuesta = parseInt(
+       *document.getElementById("respuesta*).value
     );
 
-    if (respuesta === solucion) {
+    if (respuesta *== solucion) {
 
-        document.getElementById("mensaje").innerText =
+        document.g*tElementById("mensaje").innerText *
             "✅ Correcto";
 
-        generarNivel();
+      * generarNivel();
 
     } else {
 
-        document.getElementById("mensaje").innerText =
-            "❌ Incorrecto";
+  *     document.getElementById("mens*je").innerText =
+            "❌ In*orrecto";
     }
 }
 
-window.onload = generarNivel;
+window.onload =*generarNivel;
