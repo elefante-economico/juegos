@@ -1,53 +1,45 @@
 let solucion;
-let resultadoFinal;
 
 function generarNivel() {
 
     solucion = Math.floor(Math.random() * 20) + 1;
 
     let actual = solucion;
-
     let operaciones = [];
 
     let suma = Math.floor(Math.random() * 10) + 1;
-    actual += suma;
 
+    actual = actual + suma;
     operaciones.push("+" + suma);
 
-    actual *= 2;
+    actual = actual * 2;
+    operaciones.push("×2");
 
-    operaciones.pus*("×2");
+    document.getElementById("resultado").innerText =
+        "Resultado final: " + actual;
 
-    resultadoFinal = actu*l;
-
-    document.getElementById("r*sultado").innerText =
-        "Res*ltado final: " + resultadoFinal;
-
-*   document.getElementById("operac*ones").innerHTML =
-        operaci*nes.join("<br>");
-
-    document.ge*ElementById("mensaje").innerText =*"";
-
-    document.getElementById("*espuesta").value = "";
+    document.getElementById("operaciones").innerHTML =
+        operaciones.join("<br>");
 }
 
-function*comprobar() {
+function comprobar() {
 
-    let respuesta =*        parseInt(document.getEleme*tById("respuesta").value);
+    let respuesta = parseInt(
+        document.getElementById("respuesta").value
+    );
 
-    if*(respuesta === solucion) {
+    if (respuesta === solucion) {
 
-      * document.getElementById("mensaje"*.innerText =
-            "✅ Correc*o";
+        document.getElementById("mensaje").innerText =
+            "✅ Correcto";
 
-        setTimeout(generarNiv*l, 1500);
+        generarNivel();
 
     } else {
 
-        d*cument.getElementById("mensaje").i*nerText =
-            "❌ Incorrect*";
-
+        document.getElementById("mensaje").innerText =
+            "❌ Incorrecto";
     }
 }
 
-generarNivel();
+window.onload = generarNivel;
