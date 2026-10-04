@@ -15,12 +15,18 @@
 
     <p>La computadora ha transformado un número. Deshacé las operaciones para encontrar el número inicial.</p>
 
-    <p id="nivel"></p>
-    <p id="puntaje"></p>
+    <div class="estadisticas">
+        <p id="nivel"></p>
+        <p id="puntaje"></p>
+        <p id="record"></p>
+        <p id="tiempo"></p>
+    </div>
 
     <h2 id="resultado"></h2>
 
     <div id="operaciones"></div>
+
+    <p id="pista"></p>
 
     <br>
 
@@ -31,11 +37,17 @@
 
     <br><br>
 
-    <button onclick="comprobar()">
-        Comprobar
-    </button>
+    <div class="botones">
+        <button id="btnComprobar" onclick="comprobar()">Comprobar</button>
+        <button id="btnPista" class="secundario" onclick="pedirPista()">💡 Pista</button>
+    </div>
 
     <p id="mensaje"></p>
+
+    <div class="botones">
+        <button id="btnModo" class="secundario" onclick="alternarModo()"></button>
+        <button id="btnNueva" class="secundario" onclick="nuevaPartida()">🔄 Nueva partida</button>
+    </div>
 
 </div>
 
@@ -43,4 +55,3 @@
 
 </body>
 </html>
-
