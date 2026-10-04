@@ -2,7 +2,7 @@
 
 const CONFIG = {
   tiempoInicial: 60,       // segundos al empezar en modo contrarreloj
-  bonoAcierto: 10,         // segundos que suma cada acierto
+  bonoAcierto: 60,         // segundos que suma cada acierto
   penalizacionError: 5,    // segundos que resta cada error
   limiteNumero: 100000,    // tope para que los números no se disparen
   costoPista: 3,           // puntos que resta cada pista al ganar el nivel
