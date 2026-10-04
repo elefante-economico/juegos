@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 40px 15px 0;
+}
+
+.contenedor {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.consigna {
+    color: #555;
+    font-size: 0.95em;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.estadisticas p {
+    display: inline-block;
+    margin: 4px 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+#plaga.peligro {
+    color: #c0392b;
+}
+
+/* Tablero */
+#tablero {
+    display: grid;
+    gap: 4px;
+    max-width: 440px;
+    margin: 20px auto;
+}
+
+.celda {
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(14px, 3.5vw, 22px);
+    font-weight: bold;
+    background: #dfe6e0;
+    border: 1px solid #9aa89d;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.celda:hover:not(:disabled) {
+    background: #cfe8d4;
+}
+
+.celda.vieja {
+    opacity: 0.55;
+}
+
+.celda.ultimo {
+    outline: 3px solid #e67e22;
+    opacity: 1;
+}
+
+.celda:disabled {
+    cursor: default;
+}
+
+#mensaje {
+    min-height: 3em;
+    font-weight: bold;
+}
