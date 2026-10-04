@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Hunter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <h1>PEST HUNTER 🪳</h1>
+
+    <p class="consigna">
+        Hay cucarachas escondidas en el tablero. Disparás a una casilla y el cazador
+        te dice a cuántas casillas está la más cercana (en pasos, sin diagonales).
+        Después de cada disparo, las cucarachas huyen 2 casillas.
+        Con el tiempo aparecen más. ¡Que no te invadan!
+    </p>
+
+    <div class="estadisticas">
+        <p id="nivel"></p>
+        <p id="puntaje"></p>
+        <p id="record"></p>
+    </div>
+
+    <div class="estadisticas">
+        <p id="plaga"></p>
+        <p id="proxima"></p>
+    </div>
+
+    <div id="tablero"></div>
+
+    <p id="mensaje"></p>
+
+    <button id="btnNueva" onclick="nuevaPartida()">🔄 Nueva partida</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
