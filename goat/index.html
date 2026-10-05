@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar al GOAT</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <div class="luna"></div>
+
+    <h1>🐐 ENCONTRAR AL GOAT</h1>
+
+    <p class="consigna">
+        En cada piso del hotel hay una fórmula y tres puertas con posibles resultados.
+        Solo detrás de la correcta está la cabra. Si te equivocás, perdés una vida
+        y caés un piso. ¡Llegá hasta la azotea!
+    </p>
+
+    <div class="estadisticas">
+        <p id="nivel"></p>
+        <p id="piso"></p>
+        <p id="vidas"></p>
+        <p id="record"></p>
+    </div>
+
+    <!-- El hotel se dibuja desde script.js -->
+    <div id="hotel"></div>
+
+    <p id="mensaje"></p>
+
+    <button id="btnSiguiente" onclick="siguienteNivel()" hidden>Siguiente nivel ▶</button>
+    <button id="btnNueva" onclick="nuevaPartida()">🔄 Nueva partida</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
