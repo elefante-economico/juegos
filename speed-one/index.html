@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speed-one</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <h1>🏎️ SPEED ONE</h1>
+
+    <p class="consigna">
+        Cada casilla de la pista aplica una operación a tu número. Avanzá una línea por vez
+        (al carril de al lado o al de enfrente), esquivá a los rivales y llegá a la meta
+        con el <b>número final exacto</b>. También podés usar las flechas ← ↑ →.
+        La última línea es definitiva: ¡calculá antes de cruzarla!
+    </p>
+
+    <!-- Garaje: elegí el color de tu auto -->
+    <div class="garage">
+        <p id="nombreAuto"></p>
+        <div id="colores"></div>
+        <label class="propio">
+            Color propio:
+            <input type="color" id="colorPropio" value="#dc0000">
+        </label>
+    </div>
+
+    <div class="estadisticas">
+        <p id="nivel"></p>
+        <p id="linea"></p>
+        <p id="vidas"></p>
+        <p id="puntaje"></p>
+        <p id="record"></p>
+    </div>
+
+    <div class="marcadores">
+        <div class="caja">
+            <span>Tu número</span>
+            <b id="tuNumero"></b>
+        </div>
+        <div class="flecha">➜</div>
+        <div class="caja objetivo">
+            <span>Número final</span>
+            <b id="numeroMeta"></b>
+        </div>
+    </div>
+
+    <!-- La pista se dibuja desde script.js -->
+    <div id="pista"></div>
+
+    <p id="mensaje"></p>
+
+    <div class="botones">
+        <button id="btnDeshacer" onclick="deshacer()">↩ Deshacer (−5)</button>
+        <button id="btnReiniciar" onclick="reiniciarCircuito()">🔄 Reiniciar circuito</button>
+    </div>
+    <div class="botones">
+        <button id="btnSiguiente" onclick="siguienteNivel()" hidden>Siguiente circuito ▶</button>
+        <button id="btnNueva" onclick="nuevaPartida()">🆕 Nueva carrera</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
